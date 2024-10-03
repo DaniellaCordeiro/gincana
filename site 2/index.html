@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gincana dos Continentes</title>
+    <style>
+        html, body {
+            height: 100%; /* Garante que o body ocupe 100% da altura da janela */
+            margin: 0; /* Remove margens padrão */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('continentes.jpg'); /* URL da imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Não repete a imagem */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            position: relative; /* Para permitir a sobreposição da camada escura */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+            z-index: 1; /* Coloca a camada acima do fundo */
+        }
+        h1, p, footer {
+            position: relative; /* Para que o texto fique acima da camada escura */
+            z-index: 2;
+            color: #ecf0f1; /* Cor clara para o texto */
+        }
+        .continentes {
+            margin: 20px 0;
+        }
+        .continente {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background-color: rgba(52, 152, 219, 0.9); /* Fundo semitransparente e mais claro */
+            color: white; /* Texto branco para melhor contraste */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative; /* Para garantir que os botões fiquem acima da camada escura */
+            z-index: 3; /* Garantir que os botões fiquem acima da camada escura */
+        }
+        .continente:hover {
+            background-color: rgba(41, 128, 185, 0.9);
+        }
+        .saber-sobre {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(231, 76, 60, 0.9);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            position: relative; /* Para garantir que o botão fique acima da camada escura */
+            z-index: 3; /* Garantir que o botão fique acima da camada escura */
+        }
+        .saber-sobre:hover {
+            background-color: rgba(192, 57, 43, 0.9);
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div> <!-- Camada escura -->
+
+    <h1>Bem-vindo à Gincana dos Continentes!</h1>
+    <p>Prepare-se para uma aventura incrível pelo mundo!</p>
+
+    <div class="continentes">
+        <div class="continente" onclick="location.href='africa.html'">🌍 África</div>
+        <div class="continente" onclick="location.href='america.html'">🌍 América</div>
+        <div class="continente" onclick="location.href='antarctica.html'">🌍 Antártida</div>
+        <div class="continente" onclick="location.href='oceania.html'">🌍 Oceania</div>
+        <div class="continente" onclick="location.href='europa.html'">🌍 Europa</div>
+        <div class="continente" onclick="location.href='asia.html'">🌏 Ásia</div>
+    </div>
+
+    <button class="saber-sobre" onclick="location.href='gincana.html'">Saber Sobre</button>
+
+    <footer>
+        <p>Organização: Colégio Estadual Rui Barbosa | 3º Ano B</p>
+    </footer>
+
+</body>
+</html>
